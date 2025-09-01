@@ -33,7 +33,7 @@ jobs:
         id: example_step
         run: |
           echo "master=output_value" >> $GITHUB_OUTPUT
-          echo "result=output_value" >> $GITHUB_OUTPUT
+          echo "result=is_it_different" >> $GITHUB_OUTPUT
       - name: Use output
         run: |
           echo "The output was ${{ steps.example_step.outputs.master }}"
