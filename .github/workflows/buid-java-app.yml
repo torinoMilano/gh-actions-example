@@ -21,6 +21,7 @@ jobs:
           java-version: '17'
           cache: 'maven'
       - name: Build with Maven
+        working-directory: java-app
         run: mvn --batch-mode --update-snapshots package
       - name: Prepare Artifact
         run: mkdir artifact && cp target/*.jar artifact
