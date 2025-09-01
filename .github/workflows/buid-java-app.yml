@@ -31,3 +31,6 @@ jobs:
         with:
           name: artefact upload
           path: artifact
+      - uses: ./.github/actions/code-quality-java/action.yml@main
+        with:
+          working-directory: java-app
