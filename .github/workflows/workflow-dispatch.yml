@@ -1,0 +1,22 @@
+name: workflow dispatch
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Name of the person to greet'
+        required: true
+        type: string
+      specialGreeting:
+        description: 'Ask for a special greeting?'
+        required: false
+
+jobs:
+    greet:
+        runs-on: ubuntu-latest
+        steps:
+        - name: "greet and metin"
+          run: |
+            echo "Hello ${{inputs.name}}!"
+            echo "Special greeting ${{ inputs.specialGreeting }}"
