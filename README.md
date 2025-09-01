@@ -8,3 +8,6 @@ This repository demonstrates the use of GitHub Actions for automating workflows.
     - `__TEMPLATES`: Templates used for the exercises
     - `actions/`: Custom composite actions.
     - `workflows/`: GitHub Actions workflow files.
+
+
+it is strange to no build
