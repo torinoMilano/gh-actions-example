@@ -32,11 +32,13 @@ jobs:
       - name: Set output
         id: example_step
         run: |
-          echo "master=output_value" >> $GITHUB_OUTPUT
+          echo "master=output_value,output_value2" >> $GITHUB_OUTPUT
+          echo "items=["foo","bar","baz"]" >> $GITHUB_OUTPUT
           echo "result=is_it_different" >> $GITHUB_OUTPUT
       - name: Use output
         run: |
           echo "The output was ${{ steps.example_step.outputs.master }}"
+          echo "The output was ${{ steps.example_step.outputs.items }}"
           echo "The output was ${{ steps.example_step.outputs.result }}"
       # Toolkit functions
       - name: Create messages
